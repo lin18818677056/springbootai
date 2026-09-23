@@ -47,6 +47,27 @@ static final int B = 10;  常量在准备阶段直接 = 10（ConstantValue 属�
 | Lazy Resolution | 惰性解析 | 符号引用推迟到首次使用才解析 |
 
 **触发初始化的 6 种主动引用**（面试必背）：`new`/getstatic/putstatic/invokestatic 四条指令、反射调用、子类初始化触发父类、main 所在类、`MethodHandle` 句柄对应类、接口含 default 方法时实现类初始化。**访问 static final 常量、通过数组定义引用都不触发**。
+主动引用（6 种，面试必背）
+1. new          →  new HelloJVM()
+2. getstatic    →  读静态变量 HelloJVM.a
+3. putstatic    →  写静态变量 HelloJVM.a = 1
+4. invokestatic →  调静态方法 HelloJVM.main()
+5. 反射调用      →  Class.forName("HelloJVM")
+6. 子类初始化    →  初始化子类时，先初始化父类
+7. main 所在类   →  JVM 启动时，先初始化 main 方法所在的类
+8. MethodHandle →  句柄对应的类
+9. 接口 default  →  接口有 default 方法时，实现类初始化
+
+被动引用（不触发初始化）
+
+// 1. 访问 static final 常量
+System.out.println(HelloJVM.MAX);  // 常量在编译期就放进常量池了，不触发初始化
+
+// 2. 通过数组定义引用
+HelloJVM[] arr = new HelloJVM[10];  // 只创建数组对象，不初始化 HelloJVM 类
+
+// 3. 访问父类的静态变量
+System.out.println(Sub.PARENT_STATIC);  // 只初始化父类，不初始化子类
 
 ## 3. 动手实操
 
@@ -136,11 +157,11 @@ java MyClassLoader
 
 ## 5. 今日验收清单
 
-- [ ] 能默画类加载五阶段，说清"准备是零值、初始化才赋值"
-- [ ] 能背出 6 种主动引用
-- [ ] MyClassLoader 两次实验都跑通，理解 `true→false` 的原因
-- [ ] `git add . && git commit -m "day02: classloader"` 提交
-- [ ] 笔记：写清"哪些框架打破了双亲委派、为什么敢打破"
-
+- [X] 能默画类加载五阶段，说清"准备是零值、初始化才赋值"
+- [X] 能背出 6 种主动引用
+- [X] MyClassLoader 两次实验都跑通，理解 `true→false` 的原因
+- [X] `git add . && git commit -m "day02: classloader"` 提交
+- [X] 笔记：写清"哪些框架打破了双亲委派、为什么敢打破"
+  双亲委派是“先问上级”，保证安全和唯一；但 JDBC 要让上级反过来问下级，Tomcat 要让每个应用各用各的，热部署要换加载器——这些场景不打破规矩就做不出来，所以必须打破
 ---
 [← Day 01](day01-JVM全景与环境搭建.md) | [本月目录](README.md) | [Day 03 · 运行时数据区 →](day03-运行时数据区.md)

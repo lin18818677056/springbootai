@@ -88,7 +88,7 @@ growth-plan/
 ├── phase1-基础强化/           ← 第 1-3 月：JVM、并发、网络 IO、MySQL
 │   ├── month01-JVM深度/README.md
 │   ├── month02-并发编程/README.md
-│   └── month03-网络IO与MySQL.md
+│   └── month03-网络IO与MySQL/README.md
 ├── phase2-分布式中间件/       ← 第 4-6 月：Redis、MQ、微服务、稳定性
 │   ├── month04-Redis与MySQL高阶.md
 │   ├── month05-消息队列与分布式理论.md

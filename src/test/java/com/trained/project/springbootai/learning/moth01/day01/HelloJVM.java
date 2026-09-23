@@ -1,4 +1,4 @@
-package com.trained.project.springbootai.learning.moth01;
+package com.trained.project.springbootai.learning.moth01.day01;
 
 public class HelloJVM {
 
