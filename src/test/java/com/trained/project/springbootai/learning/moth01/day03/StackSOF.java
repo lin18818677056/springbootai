@@ -13,6 +13,8 @@ public class StackSOF {
             stackSOF.recurs();
         } catch (StackOverflowError  e) {
             System.out.println("栈最大深度 = " + stackSOF.depth);
+        }finally {
+
         }
 
 

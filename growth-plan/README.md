@@ -102,6 +102,7 @@ growth-plan/
 │   ├── month11-Kafka与Spark/README.md
 │   └── month12-Flink与实时数仓/README.md
 ├── phase5-AI工程化/           ← 第 13-15 月（教程见 ../ai-learning/）
+│   └── month13-大模型基础与Prompt/README.md
 └── phase6-综合跃迁/           ← 第 16-18 月：源码、管理、面试冲刺
 ```
 
