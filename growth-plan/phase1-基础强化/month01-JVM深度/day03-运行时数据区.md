@@ -128,7 +128,28 @@ jcmd <pid> VM.metaspace | Select-Object -First 20
 - [ ] 白纸手绘运行时数据区大图（拍照存到 notes/，day07 默写比对）
 - [ ] StackSOF 三组 -Xss 数据记录完毕，能说出"深度与栈容量、栈帧大小的关系"
 - [ ] 能背出"内存区域 → 异常"对照表
-- [ ] `git add . && git commit -m "day03: runtime data areas"`
+- [ ] `git add . && git commit -m 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- "day03: runtime data areas"`
 - [ ] 笔记：为什么叶节点置 null 能帮 GC（提示：局部变量表 slot 复用 + 栈帧未出作用域）
 
 ---

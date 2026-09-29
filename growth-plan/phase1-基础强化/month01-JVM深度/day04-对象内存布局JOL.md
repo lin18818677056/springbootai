@@ -37,6 +37,9 @@ int[] arr = new int[10] = 12(头) + 4(数组长度) + 40(10×int) + 4(填充) = 
 | GC 标记 | 空 | 锁标志=11 |
 
 > 注意：偏向锁在 JDK15 起已废弃移除，新版本默认无锁起点——面试讲新版 JVM 别再背"默认偏向锁"。
+> “在 JDK 15 之前，synchronized 的锁升级是‘无锁 → 偏向锁 → 轻量级锁 → 重量级锁’。但从 JDK 15 开始，偏向锁因为维护成本高、
+> 且在如今多核高并发场景下收益不明显，已经被默认禁用并最终废弃了。
+> 所以在现代 JVM（JDK 15+）上，如果遇到同步场景，锁的状态会直接从无锁（或不可偏向）进入轻量级锁的 CAS 自旋阶段，如果自旋失败或者竞争激烈，则直接膨胀为重量级锁。
 
 ## 2. 核心概念（中英对照）
 
@@ -124,10 +127,10 @@ java -XX:-UseCompressedOops -Djdk.attach.allowAttachSelf=true -cp ".;jol-core-0.
 
 ## 5. 今日验收清单
 
-- [ ] JOL 输出截图存 notes/，能指出输出中"HEADER/类型指针/填充"三段
-- [ ] 指针压缩开关对比数据记录（16B → 24B）
-- [ ] 能口算：`new Object()`、`new int[10]`、你的 Person 类各占多少
-- [ ] `git add . && git commit -m "day04: object layout"`
+- [X] JOL 输出截图存 notes/，能指出输出中"HEADER/类型指针/填充"三段
+- [X] 指针压缩开关对比数据记录（16B → 24B）
+- [X] 能口算：`new Object()`、`new int[10]`、你的 Person 类各占多少
+- [X] `git add . && git commit -m "day04: object layout"`
 - [ ] 笔记：回答"堆超过 32GB 会发生什么"
 
 ---

@@ -90,14 +90,17 @@ growth-plan/
 │   ├── month02-并发编程/README.md
 │   └── month03-网络IO与MySQL/README.md
 ├── phase2-分布式中间件/       ← 第 4-6 月：Redis、MQ、微服务、稳定性
-│   ├── month04-Redis与MySQL高阶.md
-│   ├── month05-消息队列与分布式理论.md
-│   └── month06-微服务与稳定性.md
+│   ├── month04-Redis与MySQL高阶/README.md
+│   ├── month05-消息队列与分布式理论/README.md
+│   └── month06-微服务与稳定性/README.md
 ├── phase3-架构设计/           ← 第 7-9 月：DDD、高并发高可用、系统设计
-│   ├── month07-DDD与代码架构.md
-│   ├── month08-高并发高可用设计.md
-│   └── month09-系统设计与技术方案.md
+│   ├── month07-DDD与代码架构/README.md
+│   ├── month08-高并发高可用设计/README.md
+│   └── month09-系统设计与技术方案/README.md
 ├── phase4-大数据/             ← 第 10-12 月（教程见 ../big-data/）
+│   ├── month10-Hadoop与Hive/README.md
+│   ├── month11-Kafka与Spark/README.md
+│   └── month12-Flink与实时数仓/README.md
 ├── phase5-AI工程化/           ← 第 13-15 月（教程见 ../ai-learning/）
 └── phase6-综合跃迁/           ← 第 16-18 月：源码、管理、面试冲刺
 ```
