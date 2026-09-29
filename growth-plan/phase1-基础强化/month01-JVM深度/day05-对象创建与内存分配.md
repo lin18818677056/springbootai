@@ -117,11 +117,11 @@ java -Xms256m -Xmx256m -Xlog:gc*,gc+age=trace AllocDemo 2> gc.log
 
 ## 5. 今日验收清单
 
-- [ ] AllocDemo 跑通，jstat 采样 ≥1 分钟并截图
-- [ ] 笔记完成四条观察记录（Eden 波动/晋升阶梯/YGC-FGC 关系）
-- [ ] 64m vs 256m 对比实验做完，能回答思考题
-- [ ] `git add . && git commit -m "day05: allocation & TLAB"`
-- [ ] 能默画"new 五步 + TLAB 图"
+- [X] AllocDemo 跑通，jstat 采样 ≥1 分钟并截图
+- [X] 笔记完成四条观察记录（Eden 波动/晋升阶梯/YGC-FGC 关系）
+- [X] 64m vs 256m 对比实验做完，能回答思考题
+- [X] `git add . && git commit -m "day05: allocation & TLAB"`
+- [X] 能默画"new 五步 + TLAB 图"
 
 ---
 [← Day 04](day04-对象内存布局JOL.md) | [本月目录](README.md) | [Day 06 · 字符串常量池与直接内存 →](day06-字符串常量池与直接内存.md)
