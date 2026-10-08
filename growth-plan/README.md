@@ -85,6 +85,7 @@
 ```
 growth-plan/
 ├── README.md                 ← 你在这里：总路线图 + 方法论
+├── 18-个月家底清单.md         ← 全部 597 份文档的家底账本（资产地图/十冠文件/检索指南）
 ├── phase1-基础强化/           ← 第 1-3 月：JVM、并发、网络 IO、MySQL
 │   ├── month01-JVM深度/README.md
 │   ├── month02-并发编程/README.md
@@ -102,8 +103,13 @@ growth-plan/
 │   ├── month11-Kafka与Spark/README.md
 │   └── month12-Flink与实时数仓/README.md
 ├── phase5-AI工程化/           ← 第 13-15 月（教程见 ../ai-learning/）
-│   └── month13-大模型基础与Prompt/README.md
+│   ├── month13-大模型基础与Prompt/README.md
+│   ├── month14-RAG与知识库/README.md
+│   └── month15-Agent与AI架构/README.md
 └── phase6-综合跃迁/           ← 第 16-18 月：源码、管理、面试冲刺
+    ├── month16-源码与性能优化/README.md
+    ├── month17-技术管理与业务/README.md
+    └── month18-面试冲刺与职级跃迁/README.md
 ```
 
 每月文档格式统一为：**本月目标 → 逐日计划表（知识点中英对照 + 实战任务 + 验收标准）→ 月度产出清单 → 术语表**。

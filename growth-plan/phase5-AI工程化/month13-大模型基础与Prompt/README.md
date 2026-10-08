@@ -105,4 +105,4 @@
 ```
 
 ---
-[← 上一月：M12 Flink 与实时数仓](../phase4-大数据/month12-Flink与实时数仓/README.md) | [Day 01 · 大模型是什么 →](day01-大模型是什么.md)
+[← 上一月：M12 Flink 与实时数仓](../../phase4-大数据/month12-Flink与实时数仓/README.md) | [Day 01 · 大模型是什么 →](day01-大模型是什么.md)
